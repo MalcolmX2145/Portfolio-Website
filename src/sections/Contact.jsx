@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -70,8 +70,8 @@ const Contact = () => {
   }
 
   const contacts = [
-    { icon: <FaPhoneAlt />, title: "Call Me", info: "+254 776744754" },
-    { icon: <SiGmail />, title: "Email", info: "njorogeallan82@gmail.com" }
+    { icon: <FaPhoneAlt />, title: "Call Me", info: "+254 700743731" },
+    { icon: <SiGmail />, title: "Email", info: "ekajjamalcolm@gmail.com" }
   ]
 
   return (
@@ -83,7 +83,7 @@ const Contact = () => {
           </h1>
           <p className="text-background mt-3 mb-6" data-aos="fade-right" data-aos-delay="500">
             I would love to hear from you and how I could help. Please fill in
-            the form and I'll get back to you as soon as possible
+            the form and I&apos;ll get back to you as soon as possible
           </p>
           <div className="grid gap-5" data-aos="fade-right" data-aos-delay="700">
             {contacts.map((item, index) => (

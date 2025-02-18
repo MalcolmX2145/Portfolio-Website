@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -15,15 +15,16 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiTailwindcss } from "react-icons/si";
 //backend icons
 import { FaNodeJs } from "react-icons/fa";
-import { SiDjango, SiMysql, SiMongodb } from "react-icons/si";
+import { SiSupabase, SiFirebase, SiPostgresql } from "react-icons/si";
 // other icons
 import { FaGitAlt, FaWordpressSimple } from "react-icons/fa6";
+import { SiFramer } from "react-icons/si";
 
 const Skills = () => {
   const content = [
     {
       category: "Frontend",
-      icon: <PiBracketsCurlyBold classnName="text-2xl" />,
+      icon: <PiBracketsCurlyBold className="text-2xl" />,
       skills: [
         { icon: <FaHtml5 className="text-4xl" />, skill: "HTML" },
         { icon: <FaCss3Alt className="text-4xl" />, skill: "CSS" },
@@ -37,10 +38,9 @@ const Skills = () => {
       icon: <FaServer className="text-xl" />,
       skills: [
         { icon: <FaNodeJs className="text-4xl" />, skill: "NodeJs" },
-        // { icon: < />, skill: "ExpressJs" },
-        { icon: <SiDjango className="text-4xl" />, skill: "Django" },
-        { icon: <SiMysql className="text-4xl" />, skill: "MySQL" },
-        { icon: <SiMongodb className="text-4xl" />, skill: "MongoDB" },
+        { icon: <SiSupabase className="text-4xl" />, skill: "Supabase" },
+        { icon: <SiFirebase className="text-4xl" />, skill: "Firebase" },
+        { icon: <SiPostgresql className="text-4xl" />, skill: "PostgreSQL" },
       ],
     },
     {
@@ -49,6 +49,7 @@ const Skills = () => {
       skills: [
         { icon: <FaGitAlt className="text-4xl"/>, skill: "Git" },
         { icon: <FaWordpressSimple className="text-4xl"/>, skill: "Wordpress" },
+        { icon: <SiFramer className="text-4xl" />, skill: "Framer" },
       ],
     },
   ];

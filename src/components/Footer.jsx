@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const socials = [
-        { icon: < FaLinkedinIn className="text-3xl" />, link: "https://www.linkedin.com/in/allan-njoroge-0177b2270/" },
-        { icon: <FaGithub className="text-3xl" />, link: "https://github.com/Allan-njoroge" },
-        { icon: <FaInstagram className="text-3xl" />, link: "https://instagram.com/justallan._" }
+        { icon: < FaLinkedinIn className="text-3xl" />, link: "https://www.linkedin.com/in/malcolm-ekajja/" },
+        { icon: <FaGithub className="text-3xl" />, link: "https://github.com/MalcolmX2145" },
+        { icon: <FaInstagram className="text-3xl" />, link: "https://www.instagram.com/malcolm.x21/" }
       ]
 
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
           </Link>
         ))}
         </ul>
-           <p className="mx-auto text-background">2024 &copy; Allan Njoroge. All Rights Reserved.</p>
+           <p className="mx-auto text-background">2025 &copy; Malcolm Ekajja. All Rights Reserved.</p>
         </div>
     </div>
   )

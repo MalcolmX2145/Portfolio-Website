@@ -1,44 +1,44 @@
-import { useEffect, useRef } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+// import { useEffect, useRef } from "react";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
 import { FaLink, FaGithub } from "react-icons/fa";
 
-import Interiors from "../assets/interiors.PNG";
-import Solar from "../assets/solar-project.PNG";
-import Events from "../assets/Events.PNG";
+import NotesApp from "../assets/noteapp.jpg";
+import MovieApp from "../assets/movieapp.jpg";
+import ExpenseTracker from "../assets/expense_tracker.jpg";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
     {
-      image: Solar,
-      title: "Solar Company Website",
-      demoLink: "https://solar-co.netlify.app/",
-      codeLink: "https://github.com/Allan-njoroge/solar-company-website",
-      techStack: [{ name: "ReactJS" }, { name: "TailwindCSS" }],
-    },
-    {
-      image: Interiors,
-      title: "Interior Design Website",
-      demoLink: "https://just-interiors.netlify.app/",
-      codeLink: "https://github.com/Allan-njoroge/interior-design",
+      image: MovieApp,
+      title: "Movie App",
+      demoLink: "https://mnamsas.netlify.app/",
+      codeLink: "https://github.com/MalcolmX2145/Movie-App-v2",
       techStack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
     },
     {
-      image: Events,
-      title: "Events Reserving Platform",
-      demoLink: "https://eventxp.vercel.app/",
-      codeLink: "https://github.com/Allan-njoroge/MyEvents",
+      image: NotesApp,
+      title: "Note Taking App",
+      demoLink: "https://note-taking-app-v3.vercel.app/",
+      codeLink: "https://github.com/MalcolmX2145/note-taking-app-v3",
+      techStack: [{ name: "ReactJS" }, { name: "TailwindCSS" }],
+    },
+    {
+      image: ExpenseTracker,
+      title: "Expense Tracker App",
+      demoLink: "https://expense-tracker-app-ebon-nine.vercel.app/",
+      codeLink: "https://github.com/MalcolmX2145/expense-tracker-app",
       techStack: [
         { name: "ReactJS" },
-        { name: "CSS" },
-        { name: "NodeJs" },
-        { name: "MySQL" },
+        { name: "TailwindCSS" },
+        { name: "Supabase" },
+        { name: "PostgreSQL" },
       ],
     },
   ];
