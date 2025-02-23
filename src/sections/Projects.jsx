@@ -11,6 +11,7 @@ import { FaLink, FaGithub } from "react-icons/fa";
 import NotesApp from "../assets/noteapp.jpg";
 import MovieApp from "../assets/movieapp.jpg";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
+import ProductStore from "../assets/productstore.png";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -39,6 +40,18 @@ const Projects = () => {
         { name: "TailwindCSS" },
         { name: "Supabase" },
         { name: "PostgreSQL" },
+      ],
+    },
+    {
+      image: ProductStore,
+      title: "Product Store App",
+      demoLink: "https://react-product-store.onrender.com/",
+      codeLink: "https://github.com/MalcolmX2145/react_product_store",
+      techStack: [
+        { name: "ReactJS" },
+        { name: "TailwindCSS" },
+        { name: "Express.js" },
+        { name: "MongoDB" },
       ],
     },
   ];
