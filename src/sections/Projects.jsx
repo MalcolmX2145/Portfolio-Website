@@ -1,18 +1,9 @@
-// import { useEffect, useRef } from "react";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "@/components/ui/carousel";
 import { FaLink, FaGithub } from "react-icons/fa";
 
 import NotesApp from "../assets/noteapp.jpg";
 import MovieApp from "../assets/movieapp.jpg";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
 import ProductStore from "../assets/product_store.png";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
@@ -73,19 +64,19 @@ const Projects = () => {
               <img src={item.image} alt="" className="" />
               <div className="px-3 py-2" >
                 <div className="flex justify-between">
-                  <Link to={item.demoLink} target="_blank">
+                  <a href={item.demoLink} target="_blank" rel="noopener noreferrer">
                     <h3 className="font-bold text-xl hover:text-primary">
                       {item.title}
                     </h3>
-                  </Link>
+                  </a>
 
                   <div className="flex text-2xl gap-2">
-                    <Link to={item.demoLink} className="hover:text-primary">
+                    <a href={item.demoLink} className="hover:text-primary" target="_blank" rel="noopener noreferrer">
                       <FaLink />
-                    </Link>
-                    <Link to={item.codeLink} className="hover:text-primary">
+                    </a>
+                    <a href={item.codeLink} className="hover:text-primary" target="_blank" rel="noopener noreferrer">
                       <FaGithub />
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <ul className="flex gap-2 flex-wrap my-3">
