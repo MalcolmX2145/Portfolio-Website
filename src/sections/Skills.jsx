@@ -13,9 +13,9 @@ import { MdUnfoldMore } from "react-icons/md";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTailwindcss } from "react-icons/si";
-//backend icons
+// backend icons
 import { FaNodeJs } from "react-icons/fa";
-import { SiSupabase, SiFirebase, SiPostgresql } from "react-icons/si";
+import { SiSupabase, SiFirebase, SiPostgresql, SiExpress, SiMongodb } from "react-icons/si";
 // other icons
 import { FaGitAlt, FaWordpressSimple } from "react-icons/fa6";
 import { SiFramer } from "react-icons/si";
@@ -38,6 +38,8 @@ const Skills = () => {
       icon: <FaServer className="text-xl" />,
       skills: [
         { icon: <FaNodeJs className="text-4xl" />, skill: "NodeJs" },
+        { icon: <SiExpress className="text-4xl" />, skill: "Express" },
+        { icon: <SiMongodb className="text-4xl" />, skill: "MongoDB" },
         { icon: <SiSupabase className="text-4xl" />, skill: "Supabase" },
         { icon: <SiFirebase className="text-4xl" />, skill: "Firebase" },
         { icon: <SiPostgresql className="text-4xl" />, skill: "PostgreSQL" },
@@ -47,12 +49,13 @@ const Skills = () => {
       category: "Other",
       icon: <MdUnfoldMore className="text-2xl" />,
       skills: [
-        { icon: <FaGitAlt className="text-4xl"/>, skill: "Git" },
-        { icon: <FaWordpressSimple className="text-4xl"/>, skill: "Wordpress" },
+        { icon: <FaGitAlt className="text-4xl" />, skill: "Git" },
+        { icon: <FaWordpressSimple className="text-4xl" />, skill: "Wordpress" },
         { icon: <SiFramer className="text-4xl" />, skill: "Framer" },
       ],
     },
   ];
+
   return (
     <div className="my-28 w-[100%] flex justify-center">
       <div className="md:text-center grid gap-5 w-[100%]">
