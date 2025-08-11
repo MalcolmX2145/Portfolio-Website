@@ -18,7 +18,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiSupabase, SiFirebase, SiPostgresql, SiExpress, SiMongodb } from "react-icons/si";
 // other icons
 import { FaGitAlt, FaWordpressSimple } from "react-icons/fa6";
-import { SiFramer } from "react-icons/si";
+import { SiAmazonaws } from "react-icons/si"; // ✅ AWS icon
 
 const Skills = () => {
   const content = [
@@ -51,7 +51,7 @@ const Skills = () => {
       skills: [
         { icon: <FaGitAlt className="text-4xl" />, skill: "Git" },
         { icon: <FaWordpressSimple className="text-4xl" />, skill: "Wordpress" },
-        { icon: <SiFramer className="text-4xl" />, skill: "Framer" },
+        { icon: <SiAmazonaws className="text-4xl" />, skill: "AWS" }, // ✅ replaced Framer with AWS
       ],
     },
   ];
@@ -67,13 +67,13 @@ const Skills = () => {
             type="single"
             collapsible
             className="md:w-[60%] mx-auto"
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
             {content.map((item, index) => (
-              <AccordionItem 
-                value={`item-${index}`} 
-                key={index} 
-                className=""
+              <AccordionItem
+                value={`item-${index}`}
+                key={index}
               >
                 <AccordionTrigger className="px-5 font-bold uppercase text-lg md:text-xl">
                   <div className="flex gap-2">
@@ -83,7 +83,10 @@ const Skills = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   {item.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="flex pl-10 gap-5 my-2 text-primary hover:bg-primary/20 rounded-md py-2">
+                    <div
+                      key={skillIndex}
+                      className="flex pl-10 gap-5 my-2 text-primary hover:bg-primary/20 rounded-md py-2"
+                    >
                       <span className="rotate-z-360">{skill.icon}</span>
                       <p className="my-auto">{skill.skill}</p>
                     </div>

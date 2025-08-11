@@ -4,9 +4,17 @@ import NotesApp from "../assets/noteapp.jpg";
 import MovieApp from "../assets/movieapp.jpg";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
 import ProductStore from "../assets/product_store.png";
+import VogueHome from "../assets/Vogue.png";
 
 const Projects = () => {
   const projects = [
+    {
+      image: VogueHome,
+      title: "Vogue Smart Homes",
+      demoLink: "https://voguesmarthomes.co.ke/",
+      // codeLink: "https://github.com/MalcolmX2145/Movie-App-v2",
+      techStack: [{ name: "WordPress" }],
+    },
     {
       image: MovieApp,
       title: "Movie App",
