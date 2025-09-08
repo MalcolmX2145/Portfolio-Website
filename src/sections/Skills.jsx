@@ -51,7 +51,7 @@ const Skills = () => {
       skills: [
         { icon: <FaGitAlt className="text-4xl" />, skill: "Git" },
         { icon: <FaWordpressSimple className="text-4xl" />, skill: "Wordpress" },
-        { icon: <SiAmazonaws className="text-4xl" />, skill: "AWS" }, // ✅ replaced Framer with AWS
+        { icon: <SiAmazonaws className="text-4xl" />, skill: "AWS - Certified Solutions Architect Associate" }, // ✅ replaced Framer with AWS
       ],
     },
   ];
