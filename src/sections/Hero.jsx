@@ -1,5 +1,5 @@
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import profilePic from "../assets/LinkdIn.jpg"; // ✅ import your image
+import profilePic from "../assets/selfpic.jpg"; // ✅ import your image
 
 const Hero = () => {
   const socials = [
