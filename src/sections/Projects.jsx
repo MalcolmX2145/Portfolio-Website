@@ -25,7 +25,7 @@ const Projects = () => {
       codeLink: "https://github.com/MalcolmX2145/trainium-ai",
       description:
         "An AI-driven fitness platform that generates personalized workout and diet plans for users.",
-      techStack: [{ name: "NextJS" }, { name: "React" }, { name: "TailwindCSS" }],
+      techStack: [{ name: "NextJS" }, { name: "ReactTS" }, { name: "TailwindCSS" }],
     },
     {
       image: Bizventory,
@@ -33,7 +33,7 @@ const Projects = () => {
       demoLink: "https://bizventory-mu.vercel.app/",
       codeLink: "https://github.com/MalcolmX2145/bizflow-kit/tree/main",
       description:
-        "Bizventory is a web-based inventory and stock management system designed to help businesses track products, manage sales, monitor stock levels, and streamline daily operations.",
+        "A web-based inventory and stock management system designed to help businesses track products, manage sales, monitor stock levels, and streamline daily operations.",
       techStack: [
         { name: "ReactTS" },
         { name: "TailwindCSS" },
