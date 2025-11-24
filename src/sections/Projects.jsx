@@ -6,6 +6,7 @@ import ExpenseTracker from "../assets/expense_tracker.jpg";
 import ProductStore from "../assets/product_store.png";
 import VogueHome from "../assets/Vogue.png";
 import Trainium from "../assets/tranium.png";
+import Bizventory from "../assets/bizventory.png";
 
 const Projects = () => {
   const projects = [
@@ -45,16 +46,16 @@ const Projects = () => {
       techStack: [{ name: "ReactJS" }, { name: "TailwindCSS" }],
     },
     {
-      image: ExpenseTracker,
-      title: "Expense Tracker App",
-      demoLink: "https://expense-tracker-app-ebon-nine.vercel.app/",
-      codeLink: "https://github.com/MalcolmX2145/expense-tracker-app",
+      image: Bizventory,
+      title: "Bizventory Inventory Management System",
+      demoLink: "https://bizventory-mu.vercel.app/",
+      codeLink: "https://github.com/MalcolmX2145/bizflow-kit/tree/main",
       description:
         "An app designed to help users track spending, manage budgets, and view expense history.",
       techStack: [
-        { name: "ReactJS" },
+        { name: "ReactTS" },
         { name: "TailwindCSS" },
-        { name: "Supabase" },
+        { name: "Express.js" },
         { name: "PostgreSQL" },
       ],
     },
