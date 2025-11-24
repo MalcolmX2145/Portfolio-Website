@@ -51,7 +51,7 @@ const Projects = () => {
       demoLink: "https://bizventory-mu.vercel.app/",
       codeLink: "https://github.com/MalcolmX2145/bizflow-kit/tree/main",
       description:
-        "An app designed to help users track spending, manage budgets, and view expense history.",
+        "Bizventory is a web-based inventory and stock management system designed to help businesses track products, manage sales, monitor stock levels, and streamline daily operations.",
       techStack: [
         { name: "ReactTS" },
         { name: "TailwindCSS" },
