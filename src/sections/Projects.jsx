@@ -28,6 +28,20 @@ const Projects = () => {
       techStack: [{ name: "NextJS" }, { name: "React" }, { name: "TailwindCSS" }],
     },
     {
+      image: Bizventory,
+      title: "Bizventory Inventory Management System",
+      demoLink: "https://bizventory-mu.vercel.app/",
+      codeLink: "https://github.com/MalcolmX2145/bizflow-kit/tree/main",
+      description:
+        "Bizventory is a web-based inventory and stock management system designed to help businesses track products, manage sales, monitor stock levels, and streamline daily operations.",
+      techStack: [
+        { name: "ReactTS" },
+        { name: "TailwindCSS" },
+        { name: "Express.js" },
+        { name: "PostgreSQL" },
+      ],
+    },
+    {
       image: MovieApp,
       title: "Movie App",
       demoLink: "https://mnamsas.netlify.app/",
@@ -45,20 +59,7 @@ const Projects = () => {
         "A simple and responsive app for creating, editing, and organizing personal notes.",
       techStack: [{ name: "ReactJS" }, { name: "TailwindCSS" }],
     },
-    {
-      image: Bizventory,
-      title: "Bizventory Inventory Management System",
-      demoLink: "https://bizventory-mu.vercel.app/",
-      codeLink: "https://github.com/MalcolmX2145/bizflow-kit/tree/main",
-      description:
-        "Bizventory is a web-based inventory and stock management system designed to help businesses track products, manage sales, monitor stock levels, and streamline daily operations.",
-      techStack: [
-        { name: "ReactTS" },
-        { name: "TailwindCSS" },
-        { name: "Express.js" },
-        { name: "PostgreSQL" },
-      ],
-    },
+    
     {
       image: ProductStore,
       title: "Product Store App",
