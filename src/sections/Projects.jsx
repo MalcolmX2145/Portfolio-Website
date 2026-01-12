@@ -3,7 +3,7 @@ import { FaLink, FaGithub } from "react-icons/fa";
 import NotesApp from "../assets/noteapp.jpg";
 import MovieApp from "../assets/movieapp.jpg";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
-import ProductStore from "../assets/product_store.png";
+import ThriftCollective from "../assets/thrift_collective.png";
 import VogueHome from "../assets/Vogue.png";
 import Trainium from "../assets/tranium.png";
 import Bizventory from "../assets/bizventory.png";
@@ -59,16 +59,16 @@ const Projects = () => {
         "A simple and responsive app for creating, editing, and organizing personal notes.",
       techStack: [{ name: "ReactJS" }, { name: "TailwindCSS" }],
     },
-    
+
     {
-      image: ProductStore,
-      title: "Product Store App",
-      demoLink: "https://product-store-v2.onrender.com/",
-      codeLink: "https://github.com/MalcolmX2145/product-store-v2",
+      image: ThriftCollective,
+      title: "Thrift Collective",
+      demoLink: "https://thrift-collective.vercel.app//",
+      codeLink: "https://github.com/MalcolmX2145/thrift-collective",
       description:
-        "An e-commerce application that allows users to browse, manage, and shop for products.",
+        "Nairobi-based online thrift store featuring one-of-a-kind pieces with seamless M-Pesa checkout.",
       techStack: [
-        { name: "ReactJS" },
+        { name: "ReactTS" },
         { name: "TailwindCSS" },
         { name: "Express.js" },
         { name: "PostgreSQL" },
