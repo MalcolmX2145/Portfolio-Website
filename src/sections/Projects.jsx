@@ -3,7 +3,7 @@ import { FaLink, FaGithub } from "react-icons/fa";
 import NotesApp from "../assets/noteapp.jpg";
 import MovieApp from "../assets/movieapp.jpg";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
-import ThriftCollective from "../assets/thrift_collective.png";
+import ThriftCollective from "../assets/thrift-collective.png";
 import VogueHome from "../assets/Vogue.png";
 import Trainium from "../assets/tranium.png";
 import Bizventory from "../assets/bizventory.png";
