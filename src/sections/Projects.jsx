@@ -1,7 +1,7 @@
 import { FaLink, FaGithub } from "react-icons/fa";
 
 import NotesApp from "../assets/noteapp.jpg";
-import MovieApp from "../assets/movieapp.jpg";
+import ComfortHome from "../assets/comfort.png";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
 import ThriftCollective from "../assets/thrift-collective.png";
 import VogueHome from "../assets/Vogue.png";
@@ -16,7 +16,23 @@ const Projects = () => {
       demoLink: "https://voguesmarthomes.co.ke/",
       description:
         "A professional website for a home automation company, highlighting smart living and security solutions.",
-      techStack: [{ name: "WordPress" }],
+      techStack: [{ name: "WordPress" }, { name: "cPanel" }],
+    },
+    {
+      image: ComfortHome,
+      title: "Comfort Home Automation Web App",
+      demoLink: "https://comfort.voguesmarthomes.co.ke",
+      codeLink: "https://github.com/MalcolmX2145/comfort-home-automation",
+      description:
+        "Built for Vogue Smart Homes. A luxury home automation web application for controlling a Comfort Home Automation System.(Work in Progress)",
+      techStack: [
+        { name: "ReactTS" },
+        { name: "TailwindCSS" },
+        { name: "Node.js" },
+        { name: "Express.js" },
+        { name: "MySQL" },
+        { name: "cPanel" },
+      ],
     },
     {
       image: Trainium,
@@ -40,15 +56,6 @@ const Projects = () => {
         { name: "Express.js" },
         { name: "PostgreSQL" },
       ],
-    },
-    {
-      image: MovieApp,
-      title: "Movie App",
-      demoLink: "https://mnamsas.netlify.app/",
-      codeLink: "https://github.com/MalcolmX2145/Movie-App-v2",
-      description:
-        "A movie browsing application where users can search and explore different films.",
-      techStack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
     },
     {
       image: NotesApp,
