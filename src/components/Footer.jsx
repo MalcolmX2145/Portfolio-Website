@@ -1,11 +1,10 @@
-import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const socials = [
         { icon: < FaLinkedinIn className="text-3xl" />, link: "https://www.linkedin.com/in/malcolm-ekajja/" },
-        { icon: <FaGithub className="text-3xl" />, link: "https://github.com/MalcolmX2145" },
-        { icon: <FaInstagram className="text-3xl" />, link: "https://www.instagram.com/malcolm.x21/" }
+        { icon: <FaGithub className="text-3xl" />, link: "https://github.com/MalcolmX2145" }
       ]
 
   return (

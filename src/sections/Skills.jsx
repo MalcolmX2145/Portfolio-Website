@@ -15,10 +15,10 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiTailwindcss } from "react-icons/si";
 // backend icons
 import { FaNodeJs } from "react-icons/fa";
-import { SiSupabase, SiFirebase, SiPostgresql, SiExpress, SiMongodb } from "react-icons/si";
+import { SiSupabase, SiFirebase, SiPostgresql, SiExpress, SiMongodb, SiMysql, SiDjango, SiLaravel } from "react-icons/si";
 // other icons
 import { FaGitAlt, FaWordpressSimple, FaTerminal } from "react-icons/fa6";
-import { SiAmazonaws, SiMicrosoft } from "react-icons/si"; // ✅ AWS and Microsoft icons
+import { SiAmazonaws, SiMicrosoft, SiCpanel } from "react-icons/si"; // ✅ AWS and Microsoft icons
 
 const Skills = () => {
   const content = [
@@ -39,10 +39,13 @@ const Skills = () => {
       skills: [
         { icon: <FaNodeJs className="text-4xl" />, skill: "NodeJs" },
         { icon: <SiExpress className="text-4xl" />, skill: "Express" },
+        { icon: <SiDjango className="text-4xl" />, skill: "Django" },
+        { icon: <SiLaravel className="text-4xl" />, skill: "Laravel" },
         { icon: <SiMongodb className="text-4xl" />, skill: "MongoDB" },
+        { icon: <SiMysql className="text-4xl" />, skill: "MySQL" },
+        { icon: <SiPostgresql className="text-4xl" />, skill: "PostgreSQL" },
         { icon: <SiSupabase className="text-4xl" />, skill: "Supabase" },
         { icon: <SiFirebase className="text-4xl" />, skill: "Firebase" },
-        { icon: <SiPostgresql className="text-4xl" />, skill: "PostgreSQL" },
       ],
     },
     {
@@ -51,6 +54,7 @@ const Skills = () => {
       skills: [
         { icon: <FaGitAlt className="text-4xl" />, skill: "Git" },
         { icon: <FaWordpressSimple className="text-4xl" />, skill: "Wordpress" },
+        { icon: <SiCpanel className="text-4xl" />, skill: "cPanel" },
         { icon: <SiAmazonaws className="text-4xl" />, skill: "AWS - Certified Solutions Architect Associate" }, // ✅ replaced Framer with AWS
         { icon: <FaTerminal className="text-4xl" />, skill: "Bash" },
         { icon: <SiMicrosoft className="text-4xl" />, skill: "PowerShell" },
