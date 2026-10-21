@@ -1,6 +1,6 @@
 import { FaLink, FaGithub } from "react-icons/fa";
 
-import NotesApp from "../assets/noteapp.jpg";
+import HoriserverAttendance from "../assets/horiserver-attendance.png";
 import ComfortHome from "../assets/comfort.png";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
 import ThriftCollective from "../assets/thrift-collective.png";
@@ -58,13 +58,12 @@ const Projects = () => {
       ],
     },
     {
-      image: NotesApp,
-      title: "Note Taking App",
-      demoLink: "https://note-taking-app-v3.vercel.app/",
-      codeLink: "https://github.com/MalcolmX2145/note-taking-app-v3",
+      image: HoriserverAttendance,
+      title: "Horiserver Attendance",
+      demoLink: "https://horiserver.horizontelemetry.com/",
       description:
-        "A simple and responsive app for creating, editing, and organizing personal notes.",
-      techStack: [{ name: "ReactJS" }, { name: "TailwindCSS" }],
+        "A fingerprint attendance and access control system for managing staff, devices, base stations and roles, with live dashboards for daily attendance trends and system alerts.",
+      techStack: [{ name: "ReactTS" }, { name: "TailwindCSS" }],
     },
 
     {
@@ -116,14 +115,16 @@ const Projects = () => {
                   </a>
 
                   <div className="flex text-2xl gap-2">
-                    <a
-                      href={item.demoLink}
-                      className="hover:text-primary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaLink />
-                    </a>
+                    {item.demoLink && (
+                      <a
+                        href={item.demoLink}
+                        className="hover:text-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLink />
+                      </a>
+                    )}
                     {item.codeLink && (
                       <a
                         href={item.codeLink}
