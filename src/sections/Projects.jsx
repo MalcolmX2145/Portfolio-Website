@@ -1,15 +1,26 @@
+import { useEffect, useState } from "react";
 import { FaLink, FaGithub } from "react-icons/fa";
+import AOS from "aos";
 
 import HoriserverAttendance from "../assets/horiserver-attendance.png";
 import ComfortHome from "../assets/comfort.png";
 import ExpenseTracker from "../assets/expense_tracker.jpg";
-import ThriftCollective from "../assets/thrift-collective.png";
+import LacesNHeels from "../assets/lacesnheels.png";
 import VogueHome from "../assets/Vogue.png";
 import Trainium from "../assets/tranium.png";
 import Bizventory from "../assets/bizventory.png";
 
+const filters = ["All", "Cloud & DevOps", "Software", "IoT"];
+
 const Projects = () => {
-  // Ordered by focus area: IoT work first, then software
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  // Cards mounted by a filter change need AOS to pick them up, or they stay invisible
+  useEffect(() => {
+    AOS.refreshHard();
+  }, [activeFilter]);
+
+  // Ordered by focus area: IoT work first, then cloud, then software
   const projects = [
     {
       image: HoriserverAttendance,
@@ -38,6 +49,15 @@ const Projects = () => {
       ],
     },
     {
+      image: LacesNHeels,
+      title: "Laces & Heels",
+      areas: ["Cloud & DevOps"],
+      demoLink: "https://lacesnheels.co.ke/",
+      description:
+        "Online store for Laces & Heels Kenya, selling curated fashion, handbags, shoes and travel essentials, with ordering via WhatsApp.",
+      techStack: [],
+    },
+    {
       image: Bizventory,
       title: "Bizventory Inventory Management System",
       areas: ["Software"],
@@ -63,21 +83,6 @@ const Projects = () => {
       techStack: [{ name: "NextJS" }, { name: "ReactTS" }, { name: "TailwindCSS" }],
     },
     {
-      image: ThriftCollective,
-      title: "Thrift Collective",
-      areas: ["Software"],
-      demoLink: "https://thrift-collective.vercel.app//",
-      codeLink: "https://github.com/MalcolmX2145/thrift-collective",
-      description:
-        "Nairobi-based online thrift store featuring one-of-a-kind pieces with seamless M-Pesa checkout.",
-      techStack: [
-        { name: "ReactTS" },
-        { name: "TailwindCSS" },
-        { name: "Express.js" },
-        { name: "PostgreSQL" },
-      ],
-    },
-    {
       image: VogueHome,
       title: "Vogue Smart Homes",
       areas: ["Software"],
@@ -87,6 +92,11 @@ const Projects = () => {
       techStack: [{ name: "WordPress" }, { name: "cPanel" }],
     },
   ];
+
+  const visibleProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((item) => item.areas.includes(activeFilter));
 
   return (
     <div className="my-28 w-full flex justify-center">
@@ -99,10 +109,34 @@ const Projects = () => {
           PROJECTS
         </h1>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((item, index) => (
+        <div
+          className="flex flex-wrap gap-2 md:justify-center"
+          role="group"
+          aria-label="Filter projects by focus area"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              type="button"
+              onClick={() => setActiveFilter(filter)}
+              aria-pressed={activeFilter === filter}
+              className={`px-4 py-1 rounded-full border border-primary text-sm font-semibold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+                activeFilter === filter
+                  ? "bg-primary text-background"
+                  : "text-primary hover:bg-primary/20"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-5">
+          {visibleProjects.map((item) => (
             <div
-              key={index}
+              key={item.title}
               className="border hover:border-primary rounded-md overflow-hidden"
               data-aos="fade-up"
               data-aos-delay="500"
@@ -154,16 +188,18 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <ul className="flex gap-2 flex-wrap my-3">
-                  {item.techStack.map((stack, stackIndex) => (
-                    <li
-                      key={stackIndex}
-                      className="px-2 bg-primary/30 rounded-full text-sm"
-                    >
-                      {stack.name}
-                    </li>
-                  ))}
-                </ul>
+                {item.techStack.length > 0 && (
+                  <ul className="flex gap-2 flex-wrap my-3">
+                    {item.techStack.map((stack, stackIndex) => (
+                      <li
+                        key={stackIndex}
+                        className="px-2 bg-primary/30 rounded-full text-sm"
+                      >
+                        {stack.name}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 {/* Project description below tech stack */}
                 <p className="text-white font-medium hover:text-green-400 transition-colors duration-300">
