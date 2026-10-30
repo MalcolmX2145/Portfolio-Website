@@ -25,16 +25,16 @@ const Projects = () => {
     {
       image: HoriserverAttendance,
       title: "Horiserver Attendance",
-      areas: ["IoT", "Software"],
+      areas: ["IoT", "Software", "Cloud & DevOps"],
       demoLink: "https://horiserver.horizontelemetry.com/",
       description:
         "A fingerprint attendance and access control system for managing staff, devices, base stations and roles, with live dashboards for daily attendance trends and system alerts.",
-      techStack: [{ name: "ReactTS" }, { name: "TailwindCSS" }],
+      techStack: [{ name: "ReactTS" }, { name: "TailwindCSS" }, { name: "CI/CD" }],
     },
     {
       image: ComfortHome,
       title: "Comfort Home Automation Web App",
-      areas: ["IoT", "Software"],
+      areas: ["IoT", "Software", "Cloud & DevOps"],
       demoLink: "https://comfort.voguesmarthomes.co.ke",
       codeLink: "https://github.com/MalcolmX2145/comfort-home-automation",
       description:
@@ -46,6 +46,7 @@ const Projects = () => {
         { name: "Express.js" },
         { name: "MySQL" },
         { name: "cPanel" },
+        { name: "CI/CD" },
       ],
     },
     {
@@ -60,7 +61,7 @@ const Projects = () => {
     {
       image: Bizventory,
       title: "Bizventory Inventory Management System",
-      areas: ["Software"],
+      areas: ["Software", "Cloud & DevOps"],
       demoLink: "https://bizventory-mu.vercel.app/",
       codeLink: "https://github.com/MalcolmX2145/bizflow-kit/tree/main",
       description:
@@ -70,26 +71,27 @@ const Projects = () => {
         { name: "TailwindCSS" },
         { name: "Express.js" },
         { name: "PostgreSQL" },
+        { name: "CI/CD" },
       ],
     },
     {
       image: Trainium,
       title: "Tranium AI",
-      areas: ["Software"],
+      areas: ["Software", "Cloud & DevOps"],
       demoLink: "https://trainium-ai.vercel.app/",
       codeLink: "https://github.com/MalcolmX2145/trainium-ai",
       description:
         "An AI-driven fitness platform that generates personalized workout and diet plans for users.",
-      techStack: [{ name: "NextJS" }, { name: "ReactTS" }, { name: "TailwindCSS" }],
+      techStack: [{ name: "NextJS" }, { name: "ReactTS" }, { name: "TailwindCSS" }, { name: "CI/CD" }],
     },
     {
       image: VogueHome,
       title: "Vogue Smart Homes",
-      areas: ["Software"],
+      areas: ["Software", "Cloud & DevOps"],
       demoLink: "https://voguesmarthomes.co.ke/",
       description:
         "A professional website for a home automation company, highlighting smart living and security solutions.",
-      techStack: [{ name: "WordPress" }, { name: "cPanel" }],
+      techStack: [{ name: "WordPress" }, { name: "cPanel" }, { name: "CI/CD" }],
     },
   ];
 
