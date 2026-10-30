@@ -6,58 +6,52 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 // category icons
-import { FaServer } from "react-icons/fa";
+import { FaCloud, FaMicrochip } from "react-icons/fa";
 import { PiBracketsCurlyBold } from "react-icons/pi";
-import { MdUnfoldMore } from "react-icons/md";
-// frontend icons
-import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiTailwindcss } from "react-icons/si";
-// backend icons
-import { FaNodeJs } from "react-icons/fa";
-import { SiSupabase, SiFirebase, SiPostgresql, SiExpress, SiMongodb, SiMysql, SiDjango, SiLaravel } from "react-icons/si";
-// other icons
-import { FaGitAlt, FaWordpressSimple, FaTerminal } from "react-icons/fa6";
-import { SiAmazonaws, SiMicrosoft, SiCpanel } from "react-icons/si"; // ✅ AWS and Microsoft icons
+// cloud & devops icons
+import { FaGitAlt, FaLinux } from "react-icons/fa6";
+// software icons
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTypescript, SiPostgresql } from "react-icons/si";
+// iot icons
+import { SiArduino, SiEspressif, SiRaspberrypi, SiNodered, SiMqtt } from "react-icons/si";
 
 const Skills = () => {
+  // Skills without a logo have no icon and render as plain text
   const content = [
     {
-      category: "Frontend",
+      category: "Cloud & DevOps",
+      icon: <FaCloud className="text-2xl" />,
+      skills: [
+        { skill: "Cloud/Server Infra" },
+        { skill: "Deployment & Hosting" },
+        { skill: "Security" },
+        { icon: <FaGitAlt className="text-4xl" />, skill: "Git" },
+        { skill: "CI/CD" },
+        { icon: <FaLinux className="text-4xl" />, skill: "Linux" },
+      ],
+    },
+    {
+      category: "Software",
       icon: <PiBracketsCurlyBold className="text-2xl" />,
       skills: [
-        { icon: <FaHtml5 className="text-4xl" />, skill: "HTML" },
-        { icon: <FaCss3Alt className="text-4xl" />, skill: "CSS" },
-        { icon: <IoLogoJavascript className="text-4xl" />, skill: "JavaScript" },
-        { icon: <FaReact className="text-4xl" />, skill: "ReactJS" },
-        { icon: <SiTailwindcss className="text-4xl" />, skill: "TailwindCSS" },
-      ],
-    },
-    {
-      category: "Backend",
-      icon: <FaServer className="text-xl" />,
-      skills: [
-        { icon: <FaNodeJs className="text-4xl" />, skill: "NodeJs" },
-        { icon: <SiExpress className="text-4xl" />, skill: "Express" },
-        { icon: <SiDjango className="text-4xl" />, skill: "Django" },
-        { icon: <SiLaravel className="text-4xl" />, skill: "Laravel" },
-        { icon: <SiMongodb className="text-4xl" />, skill: "MongoDB" },
-        { icon: <SiMysql className="text-4xl" />, skill: "MySQL" },
+        { skill: "Full-Stack Development" },
+        { icon: <SiTypescript className="text-4xl" />, skill: "TypeScript" },
+        { icon: <FaReact className="text-4xl" />, skill: "React" },
+        { icon: <FaNodeJs className="text-4xl" />, skill: "Node.js" },
+        { skill: "QA Testing" },
         { icon: <SiPostgresql className="text-4xl" />, skill: "PostgreSQL" },
-        { icon: <SiSupabase className="text-4xl" />, skill: "Supabase" },
-        { icon: <SiFirebase className="text-4xl" />, skill: "Firebase" },
       ],
     },
     {
-      category: "Other",
-      icon: <MdUnfoldMore className="text-2xl" />,
+      category: "IoT",
+      icon: <FaMicrochip className="text-2xl" />,
       skills: [
-        { icon: <FaGitAlt className="text-4xl" />, skill: "Git" },
-        { icon: <FaWordpressSimple className="text-4xl" />, skill: "Wordpress" },
-        { icon: <SiCpanel className="text-4xl" />, skill: "cPanel" },
-        { icon: <SiAmazonaws className="text-4xl" />, skill: "AWS - Certified Solutions Architect Associate" }, // ✅ replaced Framer with AWS
-        { icon: <FaTerminal className="text-4xl" />, skill: "Bash" },
-        { icon: <SiMicrosoft className="text-4xl" />, skill: "PowerShell" },
+        { icon: <SiArduino className="text-4xl" />, skill: "Arduino" },
+        { icon: <SiEspressif className="text-4xl" />, skill: "ESP32" },
+        { icon: <SiRaspberrypi className="text-4xl" />, skill: "Raspberry Pi" },
+        { icon: <SiNodered className="text-4xl" />, skill: "Node-RED" },
+        { icon: <SiMqtt className="text-4xl" />, skill: "MQTT" },
       ],
     },
   ];
@@ -93,7 +87,11 @@ const Skills = () => {
                       key={skillIndex}
                       className="flex pl-10 gap-5 my-2 text-primary hover:bg-primary/20 rounded-md py-2"
                     >
-                      <span className="rotate-z-360">{skill.icon}</span>
+                      {skill.icon ? (
+                        <span className="rotate-z-360">{skill.icon}</span>
+                      ) : (
+                        <span className="w-9 shrink-0" aria-hidden="true" />
+                      )}
                       <p className="my-auto">{skill.skill}</p>
                     </div>
                   ))}

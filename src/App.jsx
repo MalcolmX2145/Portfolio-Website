@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 import { About, Hero, Skills, Projects, Contact } from "./sections";
 import { ThemeProvider } from "./components/theme-provider";
 import AOS from 'aos';
@@ -30,7 +31,8 @@ const App = () => {
           <Contact  />
           <Footer />
         </section>
-      </Router> 
+        <WhatsAppButton />
+      </Router>
     </ThemeProvider>
   );
 };

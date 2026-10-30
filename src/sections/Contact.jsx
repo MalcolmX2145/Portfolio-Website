@@ -2,7 +2,8 @@ import { useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { SiGmail } from "react-icons/si";
 import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast"
@@ -71,7 +72,8 @@ const Contact = () => {
 
   const contacts = [
     { icon: <FaPhoneAlt />, title: "Call Me", info: "+254 700743731" },
-    { icon: <SiGmail />, title: "Email", info: "ekajjamalcolm@gmail.com" }
+    { icon: <SiGmail />, title: "Email", info: "ekajjamalcolm@gmail.com" },
+    { icon: <FaWhatsapp />, title: "WhatsApp", info: "Chat on WhatsApp", link: WHATSAPP_URL }
   ]
 
   return (
@@ -91,13 +93,24 @@ const Contact = () => {
                     <i className="my-auto text-2xl p-3 bg-background rounded-full text-primary">{item.icon}</i>
                     <span className="">
                         <h4 className="text-xl font-semibold text-background">{item.title}</h4>
-                        <p className="text-background">{item.info}</p>
+                        {item.link ? (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-background underline underline-offset-4 hover:opacity-80"
+                          >
+                            {item.info}
+                          </a>
+                        ) : (
+                          <p className="text-background">{item.info}</p>
+                        )}
                     </span>
                 </div>
             ))}
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail} className="grid gap-5 w-3/4 md:w-1/2 mx-auto" data-aos="fade-right" data-aos-delay="900">
+        <form id="contact-form" ref={form} onSubmit={sendEmail} className="grid gap-5 w-3/4 md:w-1/2 mx-auto" data-aos="fade-right" data-aos-delay="900">
           {inputs.map((item, index) => (
             <div key={index} className="relative">
               <label

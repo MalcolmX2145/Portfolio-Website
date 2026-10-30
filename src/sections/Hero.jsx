@@ -28,16 +28,14 @@ const Hero = () => {
           data-aos="fade-up" 
           data-aos-delay="400"
         >
-          A Software & Cloud Engineer
+          A Cloud, Software & IoT Engineer
         </h1>
-        <p 
-          className="text-muted-foreground text-md md:text-lg md:w-[50%] mx-auto" 
-          data-aos="fade-up" 
+        <p
+          className="text-muted-foreground text-md md:text-lg md:w-[50%] mx-auto"
+          data-aos="fade-up"
           data-aos-delay="600"
         >
-          I design and build scalable software solutions and cloud-powered systems that are secure, efficient, and user-focused. 
-          With expertise across full-stack development and cloud infrastructure, I bring together creativity and engineering 
-          to deliver impactful digital experiences.
+          Based in Kenya · Cloud & DevOps · Software · IoT
         </p>
 
         {/* Social Icons */}

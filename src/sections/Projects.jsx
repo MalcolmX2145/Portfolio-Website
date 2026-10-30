@@ -9,18 +9,21 @@ import Trainium from "../assets/tranium.png";
 import Bizventory from "../assets/bizventory.png";
 
 const Projects = () => {
+  // Ordered by focus area: IoT work first, then software
   const projects = [
     {
-      image: VogueHome,
-      title: "Vogue Smart Homes",
-      demoLink: "https://voguesmarthomes.co.ke/",
+      image: HoriserverAttendance,
+      title: "Horiserver Attendance",
+      areas: ["IoT", "Software"],
+      demoLink: "https://horiserver.horizontelemetry.com/",
       description:
-        "A professional website for a home automation company, highlighting smart living and security solutions.",
-      techStack: [{ name: "WordPress" }, { name: "cPanel" }],
+        "A fingerprint attendance and access control system for managing staff, devices, base stations and roles, with live dashboards for daily attendance trends and system alerts.",
+      techStack: [{ name: "ReactTS" }, { name: "TailwindCSS" }],
     },
     {
       image: ComfortHome,
       title: "Comfort Home Automation Web App",
+      areas: ["IoT", "Software"],
       demoLink: "https://comfort.voguesmarthomes.co.ke",
       codeLink: "https://github.com/MalcolmX2145/comfort-home-automation",
       description:
@@ -35,17 +38,9 @@ const Projects = () => {
       ],
     },
     {
-      image: Trainium,
-      title: "Tranium AI",
-      demoLink: "https://trainium-ai.vercel.app/",
-      codeLink: "https://github.com/MalcolmX2145/trainium-ai",
-      description:
-        "An AI-driven fitness platform that generates personalized workout and diet plans for users.",
-      techStack: [{ name: "NextJS" }, { name: "ReactTS" }, { name: "TailwindCSS" }],
-    },
-    {
       image: Bizventory,
       title: "Bizventory Inventory Management System",
+      areas: ["Software"],
       demoLink: "https://bizventory-mu.vercel.app/",
       codeLink: "https://github.com/MalcolmX2145/bizflow-kit/tree/main",
       description:
@@ -58,17 +53,19 @@ const Projects = () => {
       ],
     },
     {
-      image: HoriserverAttendance,
-      title: "Horiserver Attendance",
-      demoLink: "https://horiserver.horizontelemetry.com/",
+      image: Trainium,
+      title: "Tranium AI",
+      areas: ["Software"],
+      demoLink: "https://trainium-ai.vercel.app/",
+      codeLink: "https://github.com/MalcolmX2145/trainium-ai",
       description:
-        "A fingerprint attendance and access control system for managing staff, devices, base stations and roles, with live dashboards for daily attendance trends and system alerts.",
-      techStack: [{ name: "ReactTS" }, { name: "TailwindCSS" }],
+        "An AI-driven fitness platform that generates personalized workout and diet plans for users.",
+      techStack: [{ name: "NextJS" }, { name: "ReactTS" }, { name: "TailwindCSS" }],
     },
-
     {
       image: ThriftCollective,
       title: "Thrift Collective",
+      areas: ["Software"],
       demoLink: "https://thrift-collective.vercel.app//",
       codeLink: "https://github.com/MalcolmX2145/thrift-collective",
       description:
@@ -79,6 +76,15 @@ const Projects = () => {
         { name: "Express.js" },
         { name: "PostgreSQL" },
       ],
+    },
+    {
+      image: VogueHome,
+      title: "Vogue Smart Homes",
+      areas: ["Software"],
+      demoLink: "https://voguesmarthomes.co.ke/",
+      description:
+        "A professional website for a home automation company, highlighting smart living and security solutions.",
+      techStack: [{ name: "WordPress" }, { name: "cPanel" }],
     },
   ];
 
@@ -103,6 +109,16 @@ const Projects = () => {
             >
               <img src={item.image} alt="" className="" />
               <div className="px-3 py-2">
+                <ul className="flex gap-2 flex-wrap mb-2" aria-label="Focus areas">
+                  {item.areas.map((area) => (
+                    <li
+                      key={area}
+                      className="px-2 border border-primary text-primary rounded-full text-xs font-semibold uppercase"
+                    >
+                      {area}
+                    </li>
+                  ))}
+                </ul>
                 <div className="flex justify-between">
                   <a
                     href={item.demoLink}
