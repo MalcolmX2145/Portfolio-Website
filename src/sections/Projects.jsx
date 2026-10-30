@@ -54,8 +54,8 @@ const Projects = () => {
       areas: ["Cloud & DevOps"],
       demoLink: "https://lacesnheels.co.ke/",
       description:
-        "Online store for Laces & Heels Kenya, selling curated fashion, handbags, shoes and travel essentials, with ordering via WhatsApp.",
-      techStack: [],
+        "Online store for Laces & Heels Kenya, selling curated fashion, handbags, shoes and travel essentials. I handled the hosting and set up the CI/CD pipeline.",
+      techStack: [{ name: "Hosting" }, { name: "CI/CD" }],
     },
     {
       image: Bizventory,
