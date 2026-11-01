@@ -28,7 +28,7 @@ const Projects = () => {
       areas: ["IoT", "Software", "Cloud & DevOps"],
       demoLink: "https://horiserver.horizontelemetry.com/",
       description:
-        "A fingerprint attendance and access control system for managing staff, devices, base stations and roles, with live dashboards for daily attendance trends and system alerts.",
+        "A fingerprint attendance and access control system for managing staff, devices, base stations and roles, with live dashboards for daily attendance trends and system alerts, working with our own RFID and fingerprint door panels.",
       techStack: [{ name: "ReactTS" }, { name: "TailwindCSS" }, { name: "CI/CD" }],
     },
     {
@@ -38,7 +38,7 @@ const Projects = () => {
       demoLink: "https://comfort.voguesmarthomes.co.ke",
       codeLink: "https://github.com/MalcolmX2145/comfort-home-automation",
       description:
-        "Built for Vogue Smart Homes. A luxury home automation web application for controlling a Comfort Home Automation System.(Work in Progress)",
+        "Built for Vogue Smart Homes. A luxury home automation web application for controlling a Comfort Home Automation System, synced with its panel and NSPanel wall switches. (Work in Progress)",
       techStack: [
         { name: "ReactTS" },
         { name: "TailwindCSS" },
