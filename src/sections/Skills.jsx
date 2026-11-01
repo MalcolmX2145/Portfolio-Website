@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/accordion";
 // category icons
 import { FaCloud, FaMicrochip } from "react-icons/fa";
+// generic icons for skills without a logo
+import { FaServer, FaRocket, FaShieldAlt, FaInfinity, FaLayerGroup, FaBug } from "react-icons/fa";
 import { PiBracketsCurlyBold } from "react-icons/pi";
 // cloud & devops icons
 import { FaGitAlt, FaLinux } from "react-icons/fa6";
@@ -17,17 +19,16 @@ import { SiTypescript, SiPostgresql } from "react-icons/si";
 import { SiArduino, SiEspressif, SiRaspberrypi, SiNodered, SiMqtt } from "react-icons/si";
 
 const Skills = () => {
-  // Skills without a logo have no icon and render as plain text
   const content = [
     {
       category: "Cloud & DevOps",
       icon: <FaCloud className="text-2xl" />,
       skills: [
-        { skill: "Cloud/Server Infra" },
-        { skill: "Deployment & Hosting" },
-        { skill: "Security" },
+        { icon: <FaServer className="text-4xl" />, skill: "Cloud/Server Infra" },
+        { icon: <FaRocket className="text-4xl" />, skill: "Deployment & Hosting" },
+        { icon: <FaShieldAlt className="text-4xl" />, skill: "Security" },
         { icon: <FaGitAlt className="text-4xl" />, skill: "Git" },
-        { skill: "CI/CD" },
+        { icon: <FaInfinity className="text-4xl" />, skill: "CI/CD" },
         { icon: <FaLinux className="text-4xl" />, skill: "Linux" },
       ],
     },
@@ -35,11 +36,11 @@ const Skills = () => {
       category: "Software",
       icon: <PiBracketsCurlyBold className="text-2xl" />,
       skills: [
-        { skill: "Full-Stack Development" },
+        { icon: <FaLayerGroup className="text-4xl" />, skill: "Full-Stack Development" },
         { icon: <SiTypescript className="text-4xl" />, skill: "TypeScript" },
         { icon: <FaReact className="text-4xl" />, skill: "React" },
         { icon: <FaNodeJs className="text-4xl" />, skill: "Node.js" },
-        { skill: "QA Testing" },
+        { icon: <FaBug className="text-4xl" />, skill: "QA Testing" },
         { icon: <SiPostgresql className="text-4xl" />, skill: "PostgreSQL" },
       ],
     },
@@ -60,7 +61,7 @@ const Skills = () => {
     <div className="my-28 w-[100%] flex justify-center">
       <div className="md:text-center grid gap-5 w-[100%]">
         <h1 className="text-2xl md:text-3xl text-primary mb-5 md:mb-10" data-aos="fade-up" data-aos-delay="300">
-          SKILLS
+          SKILLS & TOOLS
         </h1>
         <div className="w-[100%]">
           <Accordion
@@ -87,11 +88,7 @@ const Skills = () => {
                       key={skillIndex}
                       className="flex pl-10 gap-5 my-2 text-primary hover:bg-primary/20 rounded-md py-2"
                     >
-                      {skill.icon ? (
-                        <span className="rotate-z-360">{skill.icon}</span>
-                      ) : (
-                        <span className="w-9 shrink-0" aria-hidden="true" />
-                      )}
+                      <span className="rotate-z-360">{skill.icon}</span>
                       <p className="my-auto">{skill.skill}</p>
                     </div>
                   ))}
