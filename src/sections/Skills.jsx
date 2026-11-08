@@ -99,7 +99,7 @@ const Skills = () => {
                   {item.skills.map((skill, skillIndex) =>
                     skill.children ? (
                       // Nested group, e.g. Databases, opens as its own dropdown
-                      <details key={skillIndex} className="group/sub my-2">
+                      <details key={skillIndex} open className="group/sub my-2">
                         <summary className="flex pl-10 pr-5 gap-5 text-primary hover:bg-primary/20 rounded-md py-2 cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
                           <span className="rotate-z-360">{skill.icon}</span>
                           <p className="my-auto">{skill.skill}</p>
